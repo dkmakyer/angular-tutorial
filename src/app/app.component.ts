@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
+
 
 @Component({
     selector: "app-root",
@@ -9,4 +10,16 @@ import { Component } from "@angular/core";
     // styles: [""]
 })
 
-export class AppComponent {}
+export class AppComponent {
+    name = signal("David");
+
+    imageURL = signal("https://picsum.photos/300/200");
+
+    getName(){
+        return this.name();
+    }
+
+    changeImage(e: KeyboardEvent){
+        this.imageURL.set((e.target as HTMLInputElement).value);
+    }
+} 
