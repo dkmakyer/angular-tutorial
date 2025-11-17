@@ -1,5 +1,5 @@
 import { Component, signal } from "@angular/core";
-
+import { PostComponent } from "./post/post.component";
 
 @Component({
     selector: "app-root",
@@ -7,6 +7,7 @@ import { Component, signal } from "@angular/core";
     standalone: true,
     templateUrl: "./app.component.html",
     styleUrls: ["./app.component.css"],
+    imports: [PostComponent],
     // styles: [""]
 })
 

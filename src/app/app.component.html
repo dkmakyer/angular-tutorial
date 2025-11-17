@@ -1,5 +1,6 @@
 <input (keyup)="changeImage($event)" [value]="imageURL()">
-<img [src]="imageURL()">
+
+<app-post [postImage]="imageURL()"></app-post>
 
 <p>{{ name().toUpperCase() }}</p> <!-- using signal in template-->
 <p>{{ getName() }}</p>
